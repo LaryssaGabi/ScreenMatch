@@ -1,8 +1,12 @@
 package movie.modelos;
 
 import movie.modelos.calculos.CalculadoraDeTempo;
+import movie.modelos.calculos.FiltroDeRecomendacao;
+import movie.modelos.screenmatch.Episodio;
 import movie.modelos.screenmatch.Filme;
 import movie.modelos.screenmatch.Serie;
+
+import java.io.FilterOutputStream;
 
 public class Principal {
     public static void main(String[] args) {
@@ -43,5 +47,13 @@ public class Principal {
         calculadora.inclui(meuFilme);
         System.out.println(calculadora.getTempoTotal());
 
+
+        FiltroDeRecomendacao filtro = new FiltroDeRecomendacao();
+        filtro.filtra(meuFilme);
+
+        Episodio episodio = new Episodio();
+        episodio.setNumero(1);
+        episodio.setTotalVisualizacoes(300);
+        filtro.filtra(episodio);
     }
 }
