@@ -24,7 +24,7 @@ public class Serie extends  Titulo{
 
     public int getTemporadas() {
         return temporadas;
-    }
+    }  
 
     public void setTemporadas(int temporadas) {
         this.temporadas = temporadas;
