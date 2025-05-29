@@ -10,4 +10,5 @@ public class ConversorTemperaturaPadrao implements ConversorTemperatura{
     public double fahrenheitParaCelsius(double temperaturaFahrenheit) {
         return (temperaturaFahrenheit - 32) * 5 / 9;
     }
+
 }
